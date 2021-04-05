@@ -15,9 +15,7 @@
 	<form method="GET" action="JogoDaVelhaServlet">
 		<div class="container" align="center">
 
-			<h1>
-				 Jogo da Velha ! 
-			</h1>
+			<h1>Jogo da Velha !</h1>
 
 			<input type="hidden" name="celulaJogada" id="celulaJogada" />
 
@@ -58,24 +56,20 @@
 					<button type="submit" onclick="definirID(9)"
 						class="btn btn-outline-primary" name="1"><%=request.getAttribute("posicao9")%></button>
 				</div>
-			
-			
-			<h2>É a vez do jogador: <%=request.getAttribute("jogador")%></h2>
-			<h2><%=request.getAttribute("resultado")%></h2>
-			
-		
 			</div>
 		</div>
-
-
 
 		<script>
 			function definirID(id) {
 				document.getElementById('celulaJogada').value = id;
 			}
 		</script>
-
 	</form>
-
+	<div class="footer">
+		<h2>
+			É a vez do jogador:
+			<%=request.getAttribute("jogador")%></h2>
+		<h2><%=request.getAttribute("resultado")%></h2>
+	</div>
 </body>
 </html>
